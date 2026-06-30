@@ -25,7 +25,7 @@ function getWeather() {
 
             // Deteksi Tema
             const body = document.body;
-            body.className = ''; // Reset class
+            body.className = ''; 
             if (iconCode.includes('n')) body.classList.add('night');
             else if (data.weather[0].main.includes('Rain')) body.classList.add('rainy');
             else if (data.weather[0].main.includes('Clear')) body.classList.add('sunny');
