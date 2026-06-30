@@ -4,33 +4,34 @@ body {
     display: flex; 
     justify-content: center; 
     align-items: center;
-    background: linear-gradient(to bottom, #4facfe, #00f2fe); 
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite; 
-    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 300% 300%;
+    animation: colorfulMove 10s ease infinite;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-@keyframes gradientMove {
+@keyframes colorfulMove {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
 .weather-card { 
-    background: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px);
+    background: white; 
     padding: 30px; 
-    border-radius: 20px; 
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    color: white; 
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     text-align: center; 
     width: 320px;
+    transition: transform 0.3s;
 }
+
+.weather-card:hover { transform: scale(1.02); }
 
 input { 
     padding: 12px; 
     border-radius: 25px; 
-    border: none; 
+    border: 2px solid #ddd; 
     width: 80%; 
     margin-bottom: 15px; 
     text-align: center;
@@ -48,13 +49,5 @@ button {
 
 button:hover { background: #feb47b; }
 
-#datetime { margin-bottom: 15px; font-size: 0.9em; opacity: 0.8; }
-
-footer { 
-    position: absolute; 
-    bottom: 10px; 
-    width: 100%; 
-    text-align: center; 
-    color: rgba(255, 255, 255, 0.7); 
-    font-size: 0.8em; 
-}
+#datetime { margin-bottom: 15px; font-size: 0.9em; color: #555; }
+#cityName { color: #333; }
