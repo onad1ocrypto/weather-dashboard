@@ -1,53 +1,22 @@
 body { 
-    margin: 0; 
-    height: 100vh; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
-    background-size: 300% 300%;
-    animation: colorfulMove 10s ease infinite;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center;
+    transition: background 1s ease; font-family: 'Comic Sans MS', cursive, sans-serif;
 }
-
-@keyframes colorfulMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+/* Tema Dasar */
+.default { background: linear-gradient(45deg, #ff9a9e, #fad0c4); }
+/* Tema Hujan */
+.rainy { background: linear-gradient(to bottom, #203a43, #2c5364); color: white; }
+/* Tema Cerah Siang */
+.sunny { background: linear-gradient(to bottom, #ff9966, #ff5e62); color: white; }
+/* Tema Malam */
+.night { background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); color: white; }
 
 .weather-card { 
-    background: white; 
-    padding: 30px; 
-    border-radius: 30px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    text-align: center; 
-    width: 320px;
-    transition: transform 0.3s;
+    background: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2); text-align: center; width: 320px;
+    color: #333; transition: transform 0.3s;
 }
-
 .weather-card:hover { transform: scale(1.02); }
-
-input { 
-    padding: 12px; 
-    border-radius: 25px; 
-    border: 2px solid #ddd; 
-    width: 80%; 
-    margin-bottom: 15px; 
-    text-align: center;
-}
-
-button { 
-    padding: 10px 20px; 
-    border-radius: 25px; 
-    border: none; 
-    background: #ff7e5f; 
-    color: white; 
-    cursor: pointer; 
-    transition: 0.3s;
-}
-
-button:hover { background: #feb47b; }
-
-#datetime { margin-bottom: 15px; font-size: 0.9em; color: #555; }
-#cityName { color: #333; }
+input { padding: 12px; border-radius: 25px; border: 2px solid #ddd; width: 80%; margin-bottom: 15px; text-align: center; }
+button { padding: 10px 20px; border-radius: 25px; border: none; background: #ff7e5f; color: white; cursor: pointer; }
+#datetime { margin-bottom: 10px; font-size: 0.8em; }
