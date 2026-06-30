@@ -1,14 +1,18 @@
 body { 
     margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center;
     transition: background 1s ease; font-family: 'Comic Sans MS', cursive, sans-serif;
+    overflow: hidden; /* Agar awan tidak membuat scroll */
 }
-/* Tema Dasar */
+
+/* Animasi Awan */
+.clouds-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+.cloud { position: absolute; font-size: 50px; opacity: 0.6; animation: moveClouds 20s linear infinite; }
+@keyframes moveClouds { 0% { left: -100px; } 100% { left: 100%; } }
+
+/* Tema */
 .default { background: linear-gradient(45deg, #ff9a9e, #fad0c4); }
-/* Tema Hujan */
 .rainy { background: linear-gradient(to bottom, #203a43, #2c5364); color: white; }
-/* Tema Cerah Siang */
 .sunny { background: linear-gradient(to bottom, #ff9966, #ff5e62); color: white; }
-/* Tema Malam */
 .night { background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); color: white; }
 
 .weather-card { 
