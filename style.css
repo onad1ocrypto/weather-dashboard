@@ -1,0 +1,60 @@
+body { 
+    margin: 0; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe); 
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite; 
+    font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.weather-card { 
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);
+    padding: 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    color: white; 
+    text-align: center; 
+    width: 320px;
+}
+
+input { 
+    padding: 12px; 
+    border-radius: 25px; 
+    border: none; 
+    width: 80%; 
+    margin-bottom: 15px; 
+    text-align: center;
+}
+
+button { 
+    padding: 10px 20px; 
+    border-radius: 25px; 
+    border: none; 
+    background: #ff7e5f; 
+    color: white; 
+    cursor: pointer; 
+    transition: 0.3s;
+}
+
+button:hover { background: #feb47b; }
+
+#datetime { margin-bottom: 15px; font-size: 0.9em; opacity: 0.8; }
+
+footer { 
+    position: absolute; 
+    bottom: 10px; 
+    width: 100%; 
+    text-align: center; 
+    color: rgba(255, 255, 255, 0.7); 
+    font-size: 0.8em; 
+}
